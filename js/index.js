@@ -43,4 +43,59 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navLinks = document.querySelectorAll("a");
 
-console.log(navLinks);
+//console.log(navLinks);
+
+for (i = 0; i < 6; i++) {
+  navLinks[i].append(siteContent["nav"][`nav-item-${i + 1}`]);
+}
+
+const splashTxt = document.querySelector("h1");
+splashTxt.append(siteContent["cta"]["h1"]);
+
+const btnTxt = document.querySelector("button");
+btnTxt.append(siteContent["cta"]["button"]);
+// console.log(btnTxt);
+
+const circle = document.getElementById("cta-img");
+circle.setAttribute("src", siteContent["cta"]["img-src"]);
+
+// const featuresHead = document.querySelector(".top-content .text-content h4")
+
+
+
+const boxes = document.querySelectorAll("div");
+console.log(boxes);
+
+const features = boxes[3];
+//console.log(features);
+
+const featuresHead = features.children[0];
+//console.log(featuresHead);
+featuresHead.append(siteContent["main-content"]["features-h4"]);
+
+const featuresTxt = features.children[1];
+featuresTxt.append(siteContent["main-content"]["features-content"]);
+
+
+
+const about = boxes[4];
+
+const aboutHead = about.children[0];
+//console.log(featuresHead);
+aboutHead.append(siteContent["main-content"]["features-h4"]);
+
+const aboutTxt = about.children[1];
+aboutTxt.append(siteContent["main-content"]["features-content"]);
+
+const middleImg = document.querySelector(".middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+
+const services = boxes[6];
+
+const servicesHead = services.children[0];
+servicesHead.append(siteContent["main-content"]["services-h4"]);
+
+const servicesTxt = services.children [1];
+servicesTxt.append(siteContent["main-content"]["services-content"]);
+
